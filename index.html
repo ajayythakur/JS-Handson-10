@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance and Prototype</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>JS Handson</h1>
+    <h2>Inheritance and Prototype</h2>
+    <hr>
+
+    <p class="ques"><span class="red">Qn 1.Create 2 objects - parent and child. Attach methods to parent and use those methods in child object using parents prototype</span>
+        <p class="ans"><span class="green">Ans -</span>
+        <pre>
+          const ParentObj={
+          calAge:function(){
+          console.log(`${this.fname} ${this.lname} ${this.age}`)
+          }
+          }
+          let Ajay=Object.create(ParentObj);
+          Ajay.fname="Ajay";
+          Ajay.lname="Rajput";
+          Ajay.age=22;
+          Ajay.calAge();
+        </pre></p>
+
+
+        <p class="ques"><span class="red">Qn 2.Write code to explain prototype chaining.</span>
+            <p class="ans"><span class="green">Ans -</span>
+            <pre>
+                    YET TO DISCUSS
+            </pre></p>
+
+            <p class="ques"><span class="red">Qn 3.Add a method to calculate sum of all elements in Array in array's protype, use that method to calculate sum for multiple arrays.</span>
+                <p class="ans"><span class="green">Ans -</span>
+                <pre>
+                    let CalSum={
+                        sum:function(arr){
+                          let sum=0;
+                          for(let i=0;i< arr.length;i++){
+                            sum+=arr[i];
+                          }
+                          console.log(sum);
+                        }
+                      }        
+                      let arr1=[23,23];
+                      CalSum.sum(arr1);
+                      CalSum.sum([1,2,3,4]);
+                    </pre></p>
+
+
+                <p class="ques"><span class="red">Qn 4.Write a JavaScript function to retrieve all the names of object's own and inherited properties..</span>
+                <p class="ans"><span class="green">Ans -</span>
+                <pre>
+                        YET TO DISCUSS
+                </pre></p>
+</body>
+</html>
